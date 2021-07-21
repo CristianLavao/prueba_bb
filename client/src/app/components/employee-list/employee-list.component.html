@@ -1,0 +1,17 @@
+<div class="col-md-4" *ngFor="let employee of employees">
+    <div class="card text-center">
+        <div class="card-header bg-dark text-white d-flex justify-content-between align-items-center">
+            {{employee.fullname}}
+            <button class="btn btn-danger" (click)="deleteEmployee(employee.id)">
+                <i class="far fa-trash-alt"></i>
+            </button>
+        </div>
+        <div class="card-body">
+        <p>{{employee.function}}</p>
+        <a [routerLink]="['/employee/edit',employee.id]" class="btn btn-info btn-block" >
+            EDIT EMPLOYEE
+        </a>
+        </div>
+    </div>
+
+</div>
